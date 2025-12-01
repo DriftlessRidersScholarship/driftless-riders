@@ -24,6 +24,286 @@
       background-color: var(--fog);
     }
     header {
-      background: linear-gradient(180deg, var(--pine), var(--sage
+      background: linear-gradient(180deg, var(--pine), var(--sage));
+      color: white;
+      padding: 2.5rem 1rem;
+      text-align: center;
+    }
+    header h1{
+      margin:0 0 .25rem 0;
+      font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+      letter-spacing:.3px;
+    }
+    header p{margin:.25rem 0 0 0; opacity:.95}
+    .tag {
+      display:inline-block;
+      background: rgba(255,255,255,.15);
+      border:1px solid rgba(255,255,255,.35);
+      color:#fff;
+      padding:.25rem .5rem;
+      border-radius:999px;
+      font-size:.85rem;
+      margin-top:.5rem;
+    }
+    nav {
+      text-align: center;
+      background: var(--paper);
+      border-bottom:1px solid #eaeaea;
+    }
+    nav .wrap{
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: .75rem 1rem;
+      display:flex;
+      gap:1rem;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+    nav a {
+      color: var(--pine);
+      text-decoration: none;
+      font-weight: bold;
+      padding: .3rem .5rem;
+      border-radius:6px;
+    }
+    nav a:hover, nav a:focus { background: #eef4f2; outline:none; }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+    section {
+      margin-bottom: 2rem;
+      background: var(--paper);
+      border:1px solid #ececec;
+      border-radius:12px;
+      padding:1.5rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,.03);
+    }
+    section h2 { margin-top:0; color: var(--ink); }
+    .callout {
+      background-color: var(--highlight);
+      border-left: 5px solid var(--ink);
+      padding: 1rem;
+      border-radius:8px;
+      margin: 1rem 0;
+    }
+    .grid-2{
+      display:grid; gap:1rem;
+      grid-template-columns: 1fr;
+    }
+    @media(min-width:820px){
+      .grid-2{ grid-template-columns: 2fr 1fr; }
+    }
+    .button, .button-outline {
+      background-color: var(--sage);
+      color: white;
+      padding: 0.75rem 1.1rem;
+      text-decoration: none;
+      border-radius: 8px;
+      display: inline-block;
+      margin: .5rem .5rem .5rem 0;
+      font-weight: bold;
+      transition: transform .02s ease-in;
+    }
+    .button:hover { background-color: var(--pine); transform: translateY(-1px); }
+    .button-outline{
+      background:#fff; color: var(--pine);
+      border:2px solid var(--pine);
+    }
+    .button-outline:hover{ background:#eef4f2; }
+    .small { font-size:.9rem; opacity:.9 }
+    ul { padding-left: 1.2rem; }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .testimonial {
+      background-color: var(--highlight);
+      padding: 1rem;
+      border-left: 5px solid var(--ink);
+      margin-bottom: 1rem;
+      font-style: italic;
+      border-radius:8px;
+    }
+    .donate-box{
+      background:#fbfdfc;
+      border:1px solid #e8f3ef;
+      border-radius:12px;
+      padding:1rem;
+    }
+    .qr{
+      max-width: 220px;
+      border:1px solid #eaeaea;
+      border-radius:12px;
+      background:#fff;
+      padding:.5rem;
+    }
+    .footer {
+      background-color: var(--pine);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    address { font-style: normal; line-height:1.5 }
+    .badge{
+      display:inline-block; padding:.25rem .5rem; border-radius:6px;
+      background:#e8fff1; color:#0b7a3b; border:1px solid #b8f0cc; font-weight:700; font-size:.85rem;
+    }
+  </style>
+</head>
 
+<body>
+  <header role="banner">
+    <h1>Driftless Riders Scholarships</h1>
+    <p>Expanding access to horse education—riding, driving, clinics, and horsemanship—for youth in the Driftless region.</p>
+    <span class="tag" aria-label="Tax status badge">Approved 501(c)(3) nonprofit</span>
+  </header>
 
+  <nav aria-label="Main">
+    <div class="wrap">
+      <a href="#about">About</a>
+      <a href="#apply">Apply</a>
+      <a href="#donate">Donate</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#board">Board</a>
+    </div>
+  </nav>
+
+  <main class="container" id="main-content">
+
+    <!-- ABOUT -->
+    <section id="about">
+      <h2>About the Scholarship</h2>
+      <div class="callout">
+        <strong>Our mission:</strong> to make equestrian learning accessible for youth—across riding, driving, clinics, and hands-on horsemanship—especially for students who might not otherwise have access.
+      </div>
+      <p>
+        Driftless Riders Scholarships is organized exclusively for charitable and educational purposes. We raise and distribute scholarship funds to support young people in Northeast Iowa (and the wider Driftless area) in learning, developing, and sustaining equestrian skills—both in the arena and beyond.
+      </p>
+      <p>
+        Scholarships help cover lesson fees, clinics/workshops, driving instruction, and structured programs that build confidence, responsibility, and lifelong horsemanship.
+      </p>
+    </section>
+
+    <!-- APPLY -->
+    <section id="apply">
+      <h2>How to Apply</h2>
+      <p>
+        Scholarships are open to youth who demonstrate both a genuine interest in equestrian education and a clear financial need. Eligible activities include structured <strong>riding</strong> and <strong>driving</strong> lessons, clinics with certified trainers/clinicians, horsemanship programs, and recognized youth equine organizations offering formal instruction.
+      </p>
+
+      <p>The application includes:</p>
+      <ul>
+        <li>A short questionnaire (personal info, experience, goals)</li>
+        <li>A 300–500 word personal statement describing your interest, how a scholarship helps, and any barriers to access</li>
+      </ul>
+
+      <p class="small">
+        Applications are reviewed on a rolling basis. If you need help with the application or accommodations, please contact the board.
+      </p>
+
+      <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSeHYVXbBcXpy8Ff-Y7qnm6Z-iSaUGxB-aPbHCG6SKE5Zi0KcA/viewform?usp=header" target="_blank" rel="noopener noreferrer">Apply Now</a>
+    </section>
+
+    <!-- DONATE -->
+    <section id="donate">
+      <h2>Support Our Mission <span class="badge">501(c)(3) approved</span></h2>
+
+      <div class="grid-2">
+        <div>
+          <p>
+            Your gift helps local kids access <strong>lessons, clinics, driving, and hands-on horsemanship education</strong>. Every donation—of any size—directly supports opportunities for youth to learn, grow, and thrive with horses.
+          </p>
+
+          <div class="donate-box" role="region" aria-label="Ways to donate">
+            <p><strong>Ways to give:</strong></p>
+            <p>
+              💛 <strong>Venmo:</strong> <a href="https://venmo.com/u/DriftlessRiders" target="_blank" rel="noopener noreferrer">@DriftlessRiders</a><br/>
+              💛 <strong>Online form:</strong> <a href="https://docs.google.com/forms/d/e/1FAIpQLScXsrefFfAALUm_n_pNk6bq_aYjAY21iRoB49JmgblESlOrTw/viewform?usp=header" target="_blank" rel="noopener noreferrer">Donate online</a><br/>
+              💛 <strong>Check:</strong> payable to <em>Driftless Riders Scholarship Fund</em> and mailed to:
+            </p>
+            <address>
+              <strong>Driftless Riders Scholarship Fund</strong><br/>
+              c/o Krista Baldauf<br/>
+              22148 221st Ave<br/>
+              Wykoff, MN 55990
+            </address>
+            <p class="small">
+              Driftless Riders Scholarships is a registered 501(c)(3). Donations are tax-deductible as allowed by law.
+            </p>
+            <p>
+              <a class="button" href="https://venmo.com/u/DriftlessRiders" target="_blank" rel="noopener noreferrer">@DriftlessRiders on Venmo</a>
+              <a class="button-outline" href="https://docs.google.com/forms/d/e/1FAIpQLScXsrefFfAALUm_n_pNk6bq_aYjAY21iRoB49JmgblESlOrTw/viewform?usp=header" target="_blank" rel="noopener noreferrer">Donate Online</a>
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <!-- Replace the src below with your actual QR code image path in this repository. -->
+          <img class="qr" src="qr/venmo-qr-placeholder.png" alt="Scan to donate via Venmo to Driftless Riders (@DriftlessRiders)" />
+          <p class="small">Tip: add your QR image to a <code>qr/</code> folder in this repo and update the <code>src</code> above.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials">
+      <h2>What Horses Mean to Us</h2>
+
+      <div class="testimonial">
+        <p>“Riding has opened up so many new experiences and opportunities for me, and I've fully enjoyed it. I find being around horses empowering and fulfilling.” – Roxie, age 12</p>
+      </div>
+
+      <div class="testimonial">
+        <p>“The barn has not only been a place where I learned how to be a confident and competent rider but my experiences truly shaped me as a person. Taking a young horse to our first cross country clinic, galloping through fields, and teaching young children about horses are just a few of my favorite days at the barn.” – Hannah, age 18</p>
+      </div>
+
+      <div class="testimonial">
+        <p>“Riding has strengthened me both physically and mentally. I grow in confidence each time I ride. Learning to care for the horse both in the barn and in the arena shows me the importance of respect, patience and responsibility.” – Ivy, age 12</p>
+      </div>
+
+      <div class="testimonial">
+        <p>“Horse riding is my happy place. By riding horses, I've learned that hard work pays off, but it doesn't come easy. Even when I have a bad day at school or I just don't feel like going to my lesson, I am able to push those feelings away and focus on my lesson. By the end of my lesson, whatever was bothering me before my lesson doesn't seem like such a big deal anymore.” – Anya, age 13</p>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery">
+      <h2>Photo Gallery</h2>
+      <div class="gallery">
+        <img src="https://raw.githubusercontent.com/DriftlessRidersScholarship/driftless-riders/main/_DKH0109_lr%20(2).jpg" alt="Rider with horse" />
+        <img src="https://raw.githubusercontent.com/DriftlessRidersScholarship/driftless-riders/main/_DKH0133_lr%20(1).jpg" alt="Group riding lesson" />
+        <img src="https://raw.githubusercontent.com/DriftlessRidersScholarship/driftless-riders/main/Milo%20hug.jpg" alt="Smiling youth hugging a horse" />
+      </div>
+    </section>
+
+    <!-- BOARD -->
+    <section id="board">
+      <h2>Board of Directors</h2>
+      <ul>
+        <li><strong>President:</strong> Carmen Quandahl</li>
+        <li><strong>Treasurer:</strong> Krista Baldauf</li>
+        <li><strong>Secretary:</strong> Alice Runde</li>
+        <li><strong>Board Member:</strong> Anne-Marine Feat</li>
+        <li><strong>Board Member:</strong> Debbie Hofsaess</li>
+        <li><strong>Board Member:</strong> Elleson Schurtz</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Driftless Riders Scholarships. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
